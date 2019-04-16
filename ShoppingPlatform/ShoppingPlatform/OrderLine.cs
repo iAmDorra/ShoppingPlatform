@@ -2,16 +2,18 @@
 {
     public class OrderLine
     {
-        private Amount amount;
+        private readonly Amount _amount;
+        private readonly int _quantity;
 
-        public OrderLine(Amount amount)
+        public OrderLine(Amount amount, int quantity)
         {
-            this.amount = amount;
+            _amount = amount;
+            _quantity = quantity;
         }
 
         public decimal AddToTotal(decimal total)
         {
-            return this.amount.AddToTotal(total);
+            return this._amount.AddToTotal(_quantity, total);
         }
     }
 }

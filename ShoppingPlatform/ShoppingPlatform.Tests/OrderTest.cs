@@ -21,7 +21,8 @@ namespace ShoppingPlatform.Tests
         {
             var value = 12;
             var amount = new Amount(value);
-            var orderLine = new OrderLine(amount);
+            int quantity = 1;
+            var orderLine = new OrderLine(amount, quantity);
             var orderLines = new List<OrderLine>
             {
                 orderLine
@@ -36,8 +37,9 @@ namespace ShoppingPlatform.Tests
         {
             var value = 13;
             var amount = new Amount(value);
-            var orderLine = new OrderLine(amount);
-            var orderLine2 = new OrderLine(amount);
+            int quantity = 1;
+            var orderLine = new OrderLine(amount, quantity);
+            var orderLine2 = new OrderLine(amount, quantity);
             var orderLines = new List<OrderLine>
             {
                 orderLine,
@@ -46,6 +48,22 @@ namespace ShoppingPlatform.Tests
             var order = new Order(orderLines);
             decimal total = order.CalculateTotal();
             Check.That(total).IsEqualTo(value * 2);
+        }
+
+        [TestMethod]
+        public void Should_Return_Product_Price_When_Order_Contains_One_Order_Line_with_Quantity_equal_to_two()
+        {
+            var value = 13;
+            var amount = new Amount(value);
+            int quantity = 2;
+            var orderLine = new OrderLine(amount, quantity);
+            var orderLines = new List<OrderLine>
+            {
+                orderLine
+            };
+            var order = new Order(orderLines);
+            decimal total = order.CalculateTotal();
+            Check.That(total).IsEqualTo(value * quantity);
         }
     }
 }

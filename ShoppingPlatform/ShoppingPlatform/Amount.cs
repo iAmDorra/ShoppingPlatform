@@ -9,9 +9,9 @@
             _value = value;
         }
 
-        public decimal AddToTotal(decimal total)
+        public decimal AddToTotal(int quantity, decimal total)
         {
-            return total + _value;
+            return _value * quantity + total;
         }
     }
 }
