@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingPlatform", "ShoppingPlatform\ShoppingPlatform.csproj", "{4E77A69E-4B62-450A-B75A-95E685202FF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingPlatform.Tests", "ShoppingPlatform.Tests\ShoppingPlatform.Tests.csproj", "{D16B7858-A034-408F-A6DE-22324F57B7FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E77A69E-4B62-450A-B75A-95E685202FF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E77A69E-4B62-450A-B75A-95E685202FF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E77A69E-4B62-450A-B75A-95E685202FF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E77A69E-4B62-450A-B75A-95E685202FF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D16B7858-A034-408F-A6DE-22324F57B7FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D16B7858-A034-408F-A6DE-22324F57B7FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D16B7858-A034-408F-A6DE-22324F57B7FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D16B7858-A034-408F-A6DE-22324F57B7FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7D6EACC-E3A8-4F86-82E7-A47788154256}
+	EndGlobalSection
+EndGlobal
