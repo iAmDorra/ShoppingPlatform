@@ -8,5 +8,10 @@
         {
             _value = value;
         }
+
+        public decimal AddToTotal(decimal total)
+        {
+            return total + _value;
+        }
     }
 }

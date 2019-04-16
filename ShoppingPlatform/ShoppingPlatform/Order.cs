@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace ShoppingPlatform
 {
@@ -13,12 +14,12 @@ namespace ShoppingPlatform
 
         public decimal CalculateTotal()
         {
-            if (_orderLines.Count != 0)
+            decimal total = 0;
+            foreach (var orderLine in _orderLines)
             {
-                return 12;
+                total = orderLine.AddToTotal(total);
             }
-
-            return 0;
+            return total;
         }
     }
 }
