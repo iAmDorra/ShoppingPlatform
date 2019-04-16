@@ -15,5 +15,20 @@ namespace ShoppingPlatform.Tests
             decimal total = order.CalculateTotal();
             Check.That(total).IsEqualTo(0);
         }
+
+        [TestMethod]
+        public void Should_Return_Product_Price_When_Order_Contains_One_Product()
+        {
+            var value = 12;
+            var amount= new Amount(value);
+            var orderLine = new OrderLine(amount);
+            var orderLines = new List<OrderLine>
+            {
+                orderLine
+            };
+            var order = new Order(orderLines);
+            decimal total = order.CalculateTotal();
+            Check.That(total).IsEqualTo(value);
+        }
     }
 }
