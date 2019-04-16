@@ -22,7 +22,7 @@ namespace ShoppingPlatform.Tests
             var value = 12;
             var amount = new Amount(value);
             int quantity = 1;
-            var orderLine = new OrderLine(amount, quantity);
+            var orderLine = new OrderLine(amount, new Quantity(quantity));
             var orderLines = new List<OrderLine>
             {
                 orderLine
@@ -38,8 +38,8 @@ namespace ShoppingPlatform.Tests
             var value = 13;
             var amount = new Amount(value);
             int quantity = 1;
-            var orderLine = new OrderLine(amount, quantity);
-            var orderLine2 = new OrderLine(amount, quantity);
+            var orderLine = new OrderLine(amount, new Quantity(quantity));
+            var orderLine2 = new OrderLine(amount, new Quantity(quantity));
             var orderLines = new List<OrderLine>
             {
                 orderLine,
@@ -56,7 +56,7 @@ namespace ShoppingPlatform.Tests
             var value = 13;
             var amount = new Amount(value);
             int quantity = 2;
-            var orderLine = new OrderLine(amount, quantity);
+            var orderLine = new OrderLine(amount, new Quantity(quantity));
             var orderLines = new List<OrderLine>
             {
                 orderLine

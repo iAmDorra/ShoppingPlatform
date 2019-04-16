@@ -3,9 +3,9 @@
     public class OrderLine
     {
         private readonly Amount _amount;
-        private readonly int _quantity;
+        private readonly Quantity _quantity;
 
-        public OrderLine(Amount amount, int quantity)
+        public OrderLine(Amount amount, Quantity quantity)
         {
             _amount = amount;
             _quantity = quantity;

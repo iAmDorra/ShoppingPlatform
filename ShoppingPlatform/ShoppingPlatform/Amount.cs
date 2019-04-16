@@ -9,9 +9,9 @@
             _value = value;
         }
 
-        public decimal AddToTotal(int quantity, decimal total)
+        public decimal AddToTotal(Quantity quantity, decimal total)
         {
-            return _value * quantity + total;
+            return quantity.Multiply(_value) + total;
         }
     }
 }
