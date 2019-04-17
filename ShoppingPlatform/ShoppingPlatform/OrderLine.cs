@@ -11,9 +11,9 @@
             _quantity = quantity;
         }
 
-        public decimal AddToTotal(decimal total)
+        public Amount AddTo(Amount total)
         {
-            return this._amount.AddToTotal(_quantity, total);
+            return this._amount.AddQuantityAmountToTotal(_quantity, total);
         }
     }
 }

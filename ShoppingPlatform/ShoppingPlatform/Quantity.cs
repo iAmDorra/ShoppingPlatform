@@ -9,9 +9,9 @@
             _value = value;
         }
 
-        public decimal Multiply(decimal value)
+        public Amount Multiply(Amount amount)
         {
-            return _value * value;
+            return amount.Multiply(_value);
         }
     }
 }

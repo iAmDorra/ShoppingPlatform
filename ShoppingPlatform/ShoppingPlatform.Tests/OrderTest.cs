@@ -12,8 +12,8 @@ namespace ShoppingPlatform.Tests
         {
             var orderLines = new List<OrderLine>();
             var order = new Order(orderLines);
-            decimal total = order.CalculateTotal();
-            Check.That(total).IsEqualTo(0);
+            var total = order.CalculateTotal();
+            Check.That(total).IsEqualTo(new Amount(0));
         }
 
         [TestMethod]
@@ -28,8 +28,8 @@ namespace ShoppingPlatform.Tests
                 orderLine
             };
             var order = new Order(orderLines);
-            decimal total = order.CalculateTotal();
-            Check.That(total).IsEqualTo(value);
+            var total = order.CalculateTotal();
+            Check.That(total).IsEqualTo(new Amount(value));
         }
 
         [TestMethod]
@@ -46,8 +46,8 @@ namespace ShoppingPlatform.Tests
                 orderLine2
             };
             var order = new Order(orderLines);
-            decimal total = order.CalculateTotal();
-            Check.That(total).IsEqualTo(value * 2);
+            var total = order.CalculateTotal();
+            Check.That(total).IsEqualTo(new Amount(value * 2));
         }
 
         [TestMethod]
@@ -62,8 +62,8 @@ namespace ShoppingPlatform.Tests
                 orderLine
             };
             var order = new Order(orderLines);
-            decimal total = order.CalculateTotal();
-            Check.That(total).IsEqualTo(value * quantity);
+            var total = order.CalculateTotal();
+            Check.That(total).IsEqualTo(new Amount(value * quantity));
         }
     }
 }

@@ -9,9 +9,22 @@
             _value = value;
         }
 
-        public decimal AddToTotal(Quantity quantity, decimal total)
+        public Amount AddQuantityAmountToTotal(Quantity quantity, Amount total)
         {
-            return quantity.Multiply(_value) + total;
+            var quantityAmount = quantity.Multiply(this);
+            var totalValue = quantityAmount._value + total._value;
+            return new Amount(totalValue);
+        }
+
+        public override bool Equals(object obj)
+        {
+            var amount = obj as Amount;
+            return this._value.Equals(amount._value);
+        }
+
+        public Amount Multiply(int value)
+        {
+            return new Amount(_value * value);
         }
     }
 }

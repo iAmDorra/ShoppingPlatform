@@ -11,12 +11,12 @@ namespace ShoppingPlatform
             _orderLines = orderLines;
         }
 
-        public decimal CalculateTotal()
+        public Amount CalculateTotal()
         {
-            decimal total = 0;
+            Amount total = new Amount(0);
             foreach (var orderLine in _orderLines)
             {
-                total = orderLine.AddToTotal(total);
+                total = orderLine.AddTo(total);
             }
             return total;
         }
