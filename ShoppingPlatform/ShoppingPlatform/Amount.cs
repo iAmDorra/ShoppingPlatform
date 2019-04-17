@@ -12,6 +12,7 @@
         public Amount AddQuantityAmountToTotal(Quantity quantity, Amount total)
         {
             var quantityAmount = quantity.Multiply(this);
+
             var totalValue = quantityAmount._value + total._value;
             return new Amount(totalValue);
         }
@@ -22,9 +23,14 @@
             return this._value.Equals(amount._value);
         }
 
-        public Amount Multiply(int value)
+        public Amount Multiply(Amount amount)
         {
-            return new Amount(_value * value);
+            return new Amount(_value * amount._value);
+        }
+
+        public Amount Minus(Amount amount)
+        {
+            return new Amount(this._value - amount._value);
         }
     }
 }

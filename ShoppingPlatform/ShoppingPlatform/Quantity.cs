@@ -11,7 +11,12 @@
 
         public Amount Multiply(Amount amount)
         {
-            return amount.Multiply(_value);
+            var result = amount.Multiply(new Amount(_value));
+            if (_value >= 3)
+            {
+                result = result.Minus(result.Multiply(new Amount(0.2m)));
+            }
+            return result;
         }
     }
 }

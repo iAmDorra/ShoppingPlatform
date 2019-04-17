@@ -12,7 +12,7 @@
         }
 
         public Amount AddTo(Amount total)
-        {
+        {   
             return this._amount.AddQuantityAmountToTotal(_quantity, total);
         }
     }
