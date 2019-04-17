@@ -23,7 +23,9 @@ Calculate price of a customer order : {product, price}
 
 ## Step 2 : Discounts 
 3 hygienic items purchased => 20%
+
 2 cosmetic items => 15%
+
 2 tech items => 10%
 
 ## Step 3 : Currencies
